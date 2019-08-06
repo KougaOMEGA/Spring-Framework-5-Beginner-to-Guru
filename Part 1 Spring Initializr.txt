@@ -1,0 +1,10 @@
+1. Navigate to https://start.spring.io/
+
+2. For project select Maven, lauguage Java and Spring boot pick the most stable version (@the time of writing this, 2.1.7)
+
+3. Click on the list feature to see which technologies to add the framework, choose:
+ -(web)Spring Web Starter
+ -(template)Thymeleaf
+ -(sql)Spring Data JPA
+ -(sql)H2 Database
+ -(ops)Spring Boot Actuator
