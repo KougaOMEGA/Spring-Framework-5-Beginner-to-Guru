@@ -1,6 +1,7 @@
 1. Navigate to https://start.spring.io/
 
-2. For project select Maven, lauguage Java and Spring boot pick the most stable version (@the time of writing this, 2.1.7)
+2. For project select Maven, language Java and Spring boot pick the most stable version (@the time of writing this,
+2.1.7)
 
 3. Click on the list feature to see which technologies to add the framework, choose:
  -(web)Spring Web Starter
@@ -8,3 +9,12 @@
  -(sql)Spring Data JPA
  -(sql)H2 Database
  -(ops)Spring Boot Actuator
+
+ 4. Once done with selections, click 'Generate the project'.
+
+ 5. Extract the file download in you development directory.
+
+ 6. Open IntelliJ and import the project by finding the directory that has the pom.xml. Keep the settings default with
+ the exception of checking the import maven project.
+
+ 7. After the project is done loading, open the terminal inside intellj and execute mvnw spring-boot:run
