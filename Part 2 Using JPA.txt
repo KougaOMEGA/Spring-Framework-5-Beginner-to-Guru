@@ -1,0 +1,35 @@
+** Note:  To create getters and settes in IntelliJ do:: Code -> Generate -> Getter and Setter.  Then choose the ones you
+ would like to create getters and setters for. **
+
+ 1. Create another package, model, under co.orolabs.SpringIntialzr.SpringIntialzr and add two classes, Book and Author.
+
+ 2. At the top of the Author class, add @Entity(javax.persistence).
+
+ 3. Because we are using persistent data, it would be a good idea to add a id with getters and setters for out Author
+ class.
+
+ 4. Right above the id variable, add @id(javax.persistence) and @GeneratedValue(strategy = GenerationType.AUTO) so we
+ can auto generate id's for our class.
+
+ 5. Right after our Set variables in Book and Author classes, add @ManyToMany right before the instantiations  because
+ we will have a @ManyToMany relationships between books and authors.
+
+ 6. In the terminal, run mvnw spring-boot:run.
+
+ 7. Navigate to localhost:8080/h2-console.  When you get there, the page will be broken as spring.h2.console.enabled
+ is automatically set to false.
+
+ 8. Go to the resources folder in your project and add the line spring.h2.console.enabled=true.
+
+ 9. Recompile the project using run mvnw spring-boot:run.(ctrl c to shut it down if its still running)
+
+ 10. Navigate localhost:8080/h2-console, you should see some dialog about our H2 db, be sure the JDBC url is
+ jdbc:h2:mem:testdb, if not change it and save.  Then press connect.
+
+ 11.  Because we used @ManyToMany relationship in our code, hibernate auto-generated two extra db schemes, BOOKS_AUTHOR
+ & AUTHOR_BOOKS.  Lets go back into our Author class and on the @ManyTOMany annotation, lets add(mappedBy="authors").
+
+ 12. Lets also change the Books class and after the @ManyToMany annotation, add @JoinTable(name= "author_book",
+ joinColumn(name = "book_id"))
+
+ 13. Recompile the project and Navigate to the h2-console page, connect to the db and observe the changes to the db.
