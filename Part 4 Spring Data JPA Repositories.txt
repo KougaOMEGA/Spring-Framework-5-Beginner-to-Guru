@@ -1,0 +1,3 @@
+1. In the author class, right click the folder(package) co.orolabs.SpringInitializr.SpringInitializr and choose new -> package and name it 'repositories'.
+2. In repositories, created two interfaces called AuthorRepository & BookRepository.
+3. Extend those interfeces to CrudRepository and pass in <Author,Long> for the AuthorRepository interface and <Book,Long> for BookRepository.
