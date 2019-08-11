@@ -1,0 +1,16 @@
+1. Create a bootstrap package and in it create a DevBootstrap class.
+** This will be used to create data for our h2 db **
+2. Create a private void method called initData() and add 4 objects of author and books.
+3. At the head of the class implement ApplicationListenerand pass in <ContextRefreshedEvent>.
+4. Implement the methods that come with ApplicationListener, onApplicationEvent.
+5. Add the initData method inside our onApplicationEvent method.
+6. Add the spring @Component annotation to the top of the class.
+7. Create two private instances: 
+	-BookRepository
+	-AuthorRepository 
+inside our DevBootstrap class.
+8. Create a constructor and define:
+	-BookRepository
+	-AuthorRepository 
+9. With our new instances, we can add the save methods to out initData() method to wire everything up.
+10. Rerun mvnw spring-boot:run
