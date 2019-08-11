@@ -1,0 +1,19 @@
+1.  In Intellij, right click in the author class and select equals() and hashcode().
+2.  Click next and then uncheck all the references except id. Click next then finish.
+The following code will generate:
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(id, author.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+3. Next will right click again, choose generate, then toString() to generate string methods for all of our references.
+4. We will do the samething in the book class as we did in the author class.
