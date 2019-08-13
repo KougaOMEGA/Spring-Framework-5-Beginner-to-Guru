@@ -1,0 +1,10 @@
+1.  Creatre a new class in the model folder(package) and call it the Publisher.
+2.  Add two private Strings:  name and address, add a Long for id and use java persistance and add an @Entity at the top of the class.
+3.  Create getters and setters for those private variables. 
+4.  Modify the Book class and refactor all the publisher variables with the new class we created.(Be sure to add @OnetoOne right above the Publisher variable)
+5.  Now create a PublisherRepository(Interface) in the repository folder(package).
+6.  Extend it as a CrudRepository<Publisher, Long>
+7.  Create a private instance of the PublisherRepository interface in DevBootStrap located in the bootstrap folder(package)
+8.  Add the PublisherRepository to the DevBootStrap constructor 
+9.  Create new instances of Publisher in the initData() function.  Also, create publisherRepository.save(publisher); right after those instances.
+
