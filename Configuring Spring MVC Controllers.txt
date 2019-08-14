@@ -1,0 +1,6 @@
+1.  Create a new package called controllers, in that package create a class called BookController and annotate it with the @Controller annotation.
+2.  Create a function in that class called getBooks that returns a string and mass in the Model class. On top of that function use the annotation 
+@RequestMapping("/books")
+3.  Create a private variable of BookRepository, also create a contrustor and pass in the BookRepository.
+
+
