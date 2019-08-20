@@ -1,0 +1,19 @@
+1.  If you haven't already, create a folder in the resources folder called templates.
+2.  Create the an html template in the resources folder and be sure after the declaration of <!DOCTYPE html>
+to add <html lang="en" xmlns:th="http://www.thymeleaf.org">, this tells spring that we are using thymeleaf xml.
+3.  In the body ad this code: <table>
+                                  <tr>
+                                      <th>ID</th>
+                                      <th>Title</th>
+                                      <th>Author</th>
+                                  </tr>
+                                  <tr th:each="book : ${books}">
+                                      <td th:text="${book.id}">123</td>
+                                      <td th:text="${book.title}">Spring in Action</td>
+                                      <td th:text="${book.publisher.name}">Wrox</td>
+                                  </tr>
+                              </table>
+, so that we can access  our H2 resources through the book controller class.
+***Note: th:each="book : ${books}" is a thymeleaf iterator***
+4.  Fire up spring boot and look at how spring wil render the data form the h2 datatbase.
+
